@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Rasa project</title>
+  <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="offset-md-5 col-4 ">
+        <h1 class="display-3"><span class="text-primary">RIT</span>BOT</h1>
+      </div>
+    </div>
+  </div>
+
+  <div id="webchat"/>
+<script src="https://storage.googleapis.com/mrbot-cdn/webchat-latest.js"></script>
+// Or you can replace latest with a specific version
+<script>
+  WebChat.default.init({
+    selector: "#webchat",
+    initPayload: "/get_started",
+    customData: {"language": "en"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+    socketUrl: "http://35.247.165.52/",
+    socketPath: "/socket.io/",
+    title: "Title",
+    subtitle: "Subtitle",
+  })
+</script>
+
+</body>
+
+</html>
